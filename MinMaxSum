@@ -1,0 +1,16 @@
+    long sum = 0;
+    long min = Integer.MAX_VALUE ;
+    long max = Integer.MIN_VALUE;
+    for( int n : arr){
+        sum += n; 
+        if(n < min)
+            min = n;
+            
+        if(n > max)
+            max = n;
+    }
+    
+    long minimumSum = sum - max;
+    long maximumSum = sum - min;
+    System.out.println(minimumSum + " "+ maximumSum);
+    
