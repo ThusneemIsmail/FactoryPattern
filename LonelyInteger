@@ -1,0 +1,12 @@
+// Collections.sort(a);
+    // int result = 0;
+    // for(int i = 0 ; i < a.size()-1 ; i++){
+    // if(a.get(i) != a.get(i+1));
+    //  result = a.get(i+1);
+    // }
+    // return result;
+     int result = 0;
+        for (int num : a) {
+            result ^= num;
+        }
+        return result;
