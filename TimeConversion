@@ -1,0 +1,27 @@
+
+    // Write your code here
+        String output = "";
+        // int hours1 = (int) s.charAt(1) - '0';
+        // int hours2 = (int)s.charAt(0) - '0';
+        // int hours = (hours2*10 + hours1%10);
+        int hours = Integer.parseInt(s.substring(0,2));
+        if(s.charAt(8) == 'A'){
+            if(hours == 12){
+                output = "00";
+                output = output +s.substring(2,8);
+            }else{
+                output = s.substring(0,8);       
+            }
+        }else{
+            if(hours == 12){
+                output = "12";
+                output = output + s.substring(2,8);
+            }else{
+                hours = hours +12;
+                output = String.valueOf(hours);
+                output = output + s.substring(2,8);
+            }
+        }
+        return output;
+        //System.out.println(output);
+  
