@@ -1,0 +1,11 @@
+ArrayList<Integer> output = new ArrayList<>();
+        int max = arr[arr.length -1];
+        output.add(max);
+        for(int i = arr.length-2 ; i >= 0 ; i --){
+            if(arr[i] >= max){
+                max = arr[i];
+                output.add(arr[i]);
+            }
+        }
+        
+        Collections.reverse(output);
