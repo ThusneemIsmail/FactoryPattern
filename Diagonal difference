@@ -1,0 +1,9 @@
+ int diff = 0;
+    int sumLeftDiagonal = 0;
+    int sumRightDiagonal = 0;
+    for (int i = 0; i < arr.size(); i++) {
+            sumLeftDiagonal += arr.get(i).get(i);
+            sumRightDiagonal += arr.get(i).get(arr.size() - i - 1);
+    }
+        diff = Math.abs(sumLeftDiagonal-sumRightDiagonal);
+        return diff;
