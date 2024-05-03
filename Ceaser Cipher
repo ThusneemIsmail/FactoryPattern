@@ -1,0 +1,16 @@
+String s = "middle-Outz";
+        int k = 2;
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+
+            if (Character.isUpperCase(ch)) {
+                result.append((char) ((ch + k - 65) % 26 + 65));
+            } else if (Character.isLowerCase(ch)) {
+                result.append((char) ((ch + k - 97) % 26 + 97));
+            } else {
+                result.append(ch);
+            }
+        }
+        System.out.println(result.toString());
