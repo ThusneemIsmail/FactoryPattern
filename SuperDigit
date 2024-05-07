@@ -1,0 +1,14 @@
+ long sum = 0;
+    if(n.length() == 1){
+        return Integer.parseInt(n);
+    }
+    // for (int i = 0; i < n.length(); i++) {
+    //         sum += Integer.parseInt(n.charAt(i)+"") ;
+    //     }
+    for(char ch : n.toCharArray()){
+        sum += (long)(Character.getNumericValue(ch) * k);
+    }
+        
+    //sum = sum * k;
+    String sumString = String.valueOf(sum);
+    return superDigit(sumString,1);
